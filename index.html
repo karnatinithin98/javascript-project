@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>table</title>
+</head>
+<body>
+        <div class="custom-search">
+            <input class="form-control cutsom-input" type="text" id="SearchBox" placeholder="Search" onkeyup="filterRow(event)">
+            <button class="btn btn-dark cutsom-btn " type="submit">Search</button>
+        </div>  
+
+        <table id="table" class="table table-striped table-dark custom-container"></table>
+        
+        <div class="form">
+                FirstName <input class="input" type="text" id="FirstName" placeholder="shahin">
+                LastName <input class="input" type="text" id="LastName" placeholder="kadkhodaei">
+                Birthday <input class="input" type="number" id="Birthday" placeholder="2018">
+                National-Code <input class="input" type="number" id="NationalCode" placeholder="00195634">
+                Status <input class="input" type="text" id="Status" placeholder="single">
+
+                <button class="btn btn-block btn-success" id="entry" onclick="addRow()">Add</button>
+                <button class="btn btn-block btn-primary" id="edit" onclick="editRow()">Edit</button>
+                <button class="btn btn-block btn-danger" id="delete" onclick="deleteRow()">Delete</button>
+                <div style="text-align: center">
+                    <button class="btn btn-outline-dark col-md-5 custom-btn" onclick="sortByName()">Sort bt FirstName</button>
+                    <button class="btn btn-outline-dark col-md-5 custom-btn" onclick="sortByAge()">Sort bt Age</button>
+                </div>
+
+               
+        </div>
+        <div class="clear"></div>
+
+</body>
+<script src="app.js"></script>
+</html>
